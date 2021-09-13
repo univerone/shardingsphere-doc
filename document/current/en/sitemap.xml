@@ -45,20 +45,6 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/management/config-center/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/governance/management/config-center/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/governance/management/config-center/"
-                />
-  </url>
-  
-  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/features/encrypt/concept/</loc>
     <xhtml:link
                 rel="alternate"
@@ -73,16 +59,16 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/replica-query/concept/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/readwrite-splitting/concept/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/replica-query/concept/"
+                href="https://shardingsphere.apache.org/document/current/cn/features/readwrite-splitting/concept/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/replica-query/concept/"
+                href="https://shardingsphere.apache.org/document/current/en/features/readwrite-splitting/concept/"
                 />
   </url>
   
@@ -157,6 +143,34 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-resource/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rdl/rdl-resource/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-resource/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-resource/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rql/rql-resource/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-resource/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/configuration/data-source/</loc>
     <xhtml:link
                 rel="alternate"
@@ -167,6 +181,34 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/configuration/data-source/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/faq/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/others/faq/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/others/faq/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/integration-test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/integration-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/integration-test/"
                 />
   </url>
   
@@ -269,6 +311,62 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/ral/ral/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/ral/ral/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/ral/ral/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rdl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/management/registry-center/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/governance/management/registry-center/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/governance/management/registry-center/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/usage/sharding-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/usage/sharding-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/usage/sharding-rule/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/features/sharding/</loc>
     <xhtml:link
                 rel="alternate"
@@ -353,6 +451,20 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/others/api-change-history/shardingsphere-jdbc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/quick-start/shardingsphere-jdbc-quick-start/</loc>
     <xhtml:link
                 rel="alternate"
@@ -409,20 +521,6 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/sql-case/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/sql-case/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/sql-case/"
-                />
-  </url>
-  
-  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/sql-parser/</loc>
     <xhtml:link
                 rel="alternate"
@@ -433,6 +531,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/dev-manual/sql-parser/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/"
                 />
   </url>
   
@@ -521,6 +633,48 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/yaml-configuration/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/others/api-change-history/shardingsphere-jdbc/yaml-configuration/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/yaml-configuration/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/observability/agent/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/governance/observability/agent/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/governance/observability/agent/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/api-change-history/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/others/api-change-history/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/others/api-change-history/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/configuration/authentication/</loc>
     <xhtml:link
                 rel="alternate"
@@ -531,6 +685,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/configuration/authentication/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/java-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/others/api-change-history/shardingsphere-jdbc/java-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/java-api/"
                 />
   </url>
   
@@ -615,20 +783,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/features/sharding/principle/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/integration-test-engine/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/integration-test-engine/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/integration-test-engine/"
                 />
   </url>
   
@@ -759,17 +913,49 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/management/registry-center/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/readwrite-splitting/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/governance/management/registry-center/"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/readwrite-splitting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/governance/management/registry-center/"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/readwrite-splitting/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/readwrite-splitting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/java-api/readwrite-splitting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/readwrite-splitting/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/readwrite-splitting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-namespace/readwrite-splitting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/readwrite-splitting/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/readwrite-splitting/</loc>
   </url>
   
   <url>
@@ -783,62 +969,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-ui/usage/registry-center/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/replica-query/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/java-api/replica-query/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/replica-query/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/replica-query/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/replica-query/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/replica-query/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/replica-query/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-namespace/replica-query/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/replica-query/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/replica-query/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/yaml/replica-query/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/replica-query/"
                 />
   </url>
   
@@ -857,6 +987,48 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-sharding-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rdl/rdl-sharding-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-sharding-rule/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-sharding-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rql/rql-sharding-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-sharding-rule/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/features/sharding/concept/sharding/</loc>
     <xhtml:link
                 rel="alternate"
@@ -868,6 +1040,10 @@
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/features/sharding/concept/sharding/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-proxy/</loc>
   </url>
   
   <url>
@@ -899,6 +1075,34 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/parser-test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/parser-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/parser-test/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/management/dependency/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/governance/management/dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/governance/management/dependency/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/</loc>
     <xhtml:link
                 rel="alternate"
@@ -913,16 +1117,30 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/replica-query/use-norms/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/usage/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/replica-query/use-norms/"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/usage/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/replica-query/use-norms/"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/usage/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/readwrite-splitting/use-norms/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/readwrite-splitting/use-norms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/readwrite-splitting/use-norms/"
                 />
   </url>
   
@@ -1007,6 +1225,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/management/change-history/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/governance/management/change-history/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/governance/management/change-history/"
                 />
   </url>
   
@@ -1165,20 +1397,6 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/sharding/use-norms/parser/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/sharding/use-norms/parser/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/sharding/use-norms/parser/"
-                />
-  </url>
-  
-  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/configuration/props/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1193,16 +1411,58 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/replica-query/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/ral/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/replica-query/"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/ral/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/replica-query/"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/ral/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-readwrite-splitting-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rdl/rdl-readwrite-splitting-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-readwrite-splitting-rule/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-readwrite-splitting-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rql/rql-readwrite-splitting-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-readwrite-splitting-rule/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/readwrite-splitting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/readwrite-splitting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/readwrite-splitting/"
                 />
   </url>
   
@@ -1319,16 +1579,16 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/parse-test-engine/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/rewrite-test/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/parse-test-engine/"
+                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/rewrite-test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/parse-test-engine/"
+                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/rewrite-test/"
                 />
   </url>
   
@@ -1459,6 +1719,10 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/api-change-history/shardingsphere-jdbc/spring-boot-starter/</loc>
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/sharding/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1469,6 +1733,34 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/dev-manual/sharding/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-encrypt-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rdl/rdl-encrypt-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-encrypt-rule/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-encrypt-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rql/rql-encrypt-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-encrypt-rule/"
                 />
   </url>
   
@@ -1529,16 +1821,16 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/sharding/use-norms/rdl/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/performance-test/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/sharding/use-norms/rdl/"
+                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/performance-test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/sharding/use-norms/rdl/"
+                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/performance-test/"
                 />
   </url>
   
@@ -1553,20 +1845,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-ui/usage/runtime-status/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/usage/sctl/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-proxy/usage/sctl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-proxy/usage/sctl/"
                 />
   </url>
   
@@ -1655,34 +1933,6 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/rewrite-test-engine/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/rewrite-test-engine/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/rewrite-test-engine/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/governance/management/dependency/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/governance/management/dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/governance/management/dependency/"
-                />
-  </url>
-  
-  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/governance/spring-namespace/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1739,6 +1989,20 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/bitronix/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/usage/transaction/bitronix/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/bitronix/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/built-in-algorithm/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1749,6 +2013,34 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/built-in-algorithm/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-db-discovery-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rdl/rdl-db-discovery-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rdl/rdl-db-discovery-rule/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-db-discovery-rule/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/syntax/rql/rql-db-discovery-rule/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/syntax/rql/rql-db-discovery-rule/"
                 />
   </url>
   
@@ -1781,62 +2073,6 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/governance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/java-api/governance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/governance/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/governance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/governance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/governance/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/governance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-namespace/governance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/governance/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/governance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/yaml/governance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/governance/"
-                />
-  </url>
-  
-  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/sharding/hint/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1865,30 +2101,100 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/performance-test/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mode/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/performance-test/"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/java-api/mode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/performance-test/"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mode/"
                 />
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/replica-query/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/mode/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/replica-query/"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/mode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/dev-manual/replica-query/"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/mode/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/mode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-namespace/mode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/mode/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/mode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/yaml/mode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/mode/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/narayana/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/usage/transaction/narayana/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/narayana/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/test-engine/performance-test-sysbench/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/test-engine/performance-test-sysbench/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/test-engine/performance-test-sysbench/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/readwrite-splitting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/readwrite-splitting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/dev-manual/readwrite-splitting/"
                 />
   </url>
   
@@ -1903,20 +2209,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://shardingsphere.apache.org/document/current/en/features/scaling/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/seata/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/usage/transaction/seata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/seata/"
                 />
   </url>
   
@@ -1991,6 +2283,62 @@
   </url>
   
   <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mix/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/java-api/mix/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mix/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/mix/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/mix/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-boot-starter/mix/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/mix/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-namespace/mix/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/mix/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/mix/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/yaml/mix/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/mix/"
+                />
+  </url>
+  
+  <url>
     <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/props/</loc>
     <xhtml:link
                 rel="alternate"
@@ -2005,30 +2353,48 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/transaction/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/change-history/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/transaction/"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/configuration/spring-namespace/change-history/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/dev-manual/transaction/"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/spring-namespace/change-history/"
                 />
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/faq/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/yaml/change-history/</loc>
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/others/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/faq/"
+                href="https://shardingsphere.apache.org/document/current/cn/others/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/faq/"
+                href="https://shardingsphere.apache.org/document/current/en/others/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/seata/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/usage/transaction/seata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/usage/transaction/seata/"
                 />
   </url>
   
@@ -2047,16 +2413,72 @@
   </url>
   
   <url>
-    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/governance/</loc>
+    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/sql-check/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/governance/"
+                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/sql-check/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://shardingsphere.apache.org/document/current/en/dev-manual/governance/"
+                href="https://shardingsphere.apache.org/document/current/en/dev-manual/sql-check/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/dist-sql/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/dist-sql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/dist-sql/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/transaction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/transaction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/dev-manual/transaction/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/dev-manual/mode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/dev-manual/mode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/dev-manual/mode/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://shardingsphere.apache.org/document/current/en/features/mode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://shardingsphere.apache.org/document/current/cn/features/mode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shardingsphere.apache.org/document/current/en/features/mode/"
                 />
   </url>
   

@@ -56,7 +56,7 @@
               Document<em class="i-d-caret"></em>
               <div class="i-drop-pop">
                 <a class="i-drop-list" href="https://shardingsphere.apache.org/document/current/en/overview"
-                  target="_blank">5.x(Current)</a>
+                  target="_blank">master</a>
                 <a class="i-drop-list" href="https://shardingsphere.apache.org/document/legacy/4.x/document/en/overview"
                   target="_blank">4.x(Legacy)</a>
                 <a class="i-drop-list" href="https://shardingsphere.apache.org/document/legacy/3.x/document/en/overview"
@@ -83,6 +83,12 @@
                   Tracker</a>
                 <a class="i-drop-list" href="https://shardingsphere.apache.org/community/en/powered-by/"
                   target="_blank">Powered By</a>
+                <a class="i-drop-list" href="https://shardingsphere.apache.org/community/en/contribute/subscribe/"
+                   target="_blank">Mailing List</a>
+                <a class="i-drop-list" href="https://twitter.com/ShardingSphere"
+                   target="_blank">Twitter</a>
+                <a class="i-drop-list" href="https://apacheshardingsphere.slack.com/messages/C026MLH7F34"
+                   target="_blank">Slack</a>
               </div>
             </div>
           </div>
@@ -133,42 +139,32 @@
       <div id="content" class="content">
         <div class="sub-title">
           <div class="sub-title-box">
-            <div class="sub-title-ie">
-              Apache ShardingSphere
-            </div>
+            <div class="sub-title-ie">Apache ShardingSphere</div>
           </div>
-          <div class="sub-title-extra">
-            Flexible & Embeddable & Extensible
-          </div>
+          <div class="sub-title-extra">Plus & Link & Pluggable</div>
         </div>
         <hr class="sub-hr" />
         <p class="sub-text">
-          Apache ShardingSphere is an open-source ecosystem
-          consisted of a set of distributed database middleware solutions,
+          Apache ShardingSphere is an open-source ecosystem consisted of a set of distributed database solutions,
           including 3 independent products, JDBC, Proxy & Sidecar (Planning).
-          They all provide functions of data sharding, distributed transaction and database orchestration,
-          applicable in a variety of situations such as Java isomorphism,
-          heterogeneous language and cloud native.
+          They all provide functions of data scale out, distributed transaction and distributed governance,
+          applicable in a variety of situations such as Java isomorphism, heterogeneous language and cloud native.
         </p>
         <p class="sub-text">
-          Aiming at reasonably making full use of the computation and storage
-          capacity of database in distributed system, ShardingSphere defines
-          itself as a middleware, rather than a totally new type of database.
-          As the cornerstone of many enterprises, relational database still
-          takes a huge market share. Therefore, at current stage, we prefer to
-          focus on its increment instead of a total overturn.
+          Apache ShardingSphere aiming at reasonably making full use of the computation and storage capacity of existed database in distributed system, 
+          rather than a totally new database.
+          As the cornerstone of enterprises, relational database still takes a huge market share. 
+          Therefore, we prefer to focus on its increment instead of a total overturn.
         </p>
         <p class="sub-text">
-          Apache ShardingSphere begin to focus on pluggable architecture from version 5.x, features can be embedded into
-          project flexibility.
-          Currently, the features such as data sharding, query from replica, data encrypt, shadow database,
-          and SQL dialects / database protocols such as MySQL, PostgreSQL, SQLServer, Oracle supported are all weaved by
-          plugins.
+          Apache ShardingSphere begin to focus on pluggable architecture from version 5.x, features can be embedded into project flexibility.
+          Currently, the features such as data sharding, replica query, data encrypt, shadow database,
+          and SQL dialects / database protocols such as MySQL, PostgreSQL, SQLServer, Oracle supported are all weaved by plugins.
           Developers can customize their own ShardingSphere just like building lego blocks.
           There are lots of SPI extensions for Apache ShardingSphere now and increase continuously.
         </p>
         <p class="sub-text">
-          ShardingSphere became an Apache Top Level Project on April 16 2020.
+          ShardingSphere became an Apache Top Level Project on April 16, 2020.
         </p>
         <div class="sub-btn_box">
           <a class="sub-button download" href="https://shardingsphere.apache.org/document/current/en/downloads/"
@@ -206,16 +202,29 @@
         <div class="con-shard">
           <div class="con-item">
             <div class="l-msg">
-              <div class="l-m-tit">Data Sharding</div>
+              <div class="l-m-tit">Scale Out</div>
               <hr class="l-m-tit-hr" />
               <div class="l-m-info">
-                <p>Database sharding & Table sharding</p>
-                <p>Query from Replica</p>
-                <p>Sharding strategy customization</p>
-                <p>Centre-less distributed primary key</p>
+                <p>Data storage is not limited by single disk capacity, it is possible for increase storage capacity by increasing database servers, 
+                  system can migrate data dynamically in anytime and anywhere without shutdown. </p>
               </div>
             </div>
             <img src="https://shardingsphere.apache.org/images/db_sharding.png" class="point-img" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="con-orch">
+          <div class="con-item">
+            <div class="l-msg">
+              <div class="l-m-tit">Compute and Storage Split</div>
+              <hr class="l-m-tit-hr" />
+              <div class="l-m-info">
+                <p>Computing nodes are stateless and can be increased by scale out, storage and computing nodes can be optimized independently.
+                  it is possible for share the capacity by computing push down.</p>
+              </div>
+            </div>
+            <img src="https://shardingsphere.apache.org/images/db_orchestration.png" class="point-img" alt="" />
           </div>
         </div>
       </div>
@@ -226,10 +235,7 @@
               <div class="l-m-tit">Distributed Transaction</div>
               <hr class="l-m-tit-hr" />
               <div class="l-m-info">
-                <p>Unified Transaction API</p>
-                <p>XA transaction</p>
-                <p>BASE transaction</p>
-                <p>&nbsp;</p> <!-- placeholder -->
+                <p>Provide hybrid engine based on XA 2PC and BASE transaction.</p>
               </div>
             </div>
             <img src="https://shardingsphere.apache.org/images/db_transaction.png" class="point-img" alt="" />
@@ -237,19 +243,44 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="con-orch">
+        <div class="con-shard">
           <div class="con-item">
             <div class="l-msg">
-              <div class="l-m-tit">Database Governance</div>
+              <div class="l-m-tit">HA & Consensus</div>
               <hr class="l-m-tit-hr" />
               <div class="l-m-info">
-                <p>Distributed Governance</p>
-                <p>Data migration & Scale out</p>
-                <p>Tracing & Observability Supported</p>
-                <p>Data Encryption</p>
+                <p>Integrated native database HA and consensus solution.</p>
               </div>
             </div>
-            <img src="https://shardingsphere.apache.org/images/db_orchestration.png" class="point-img" alt="" />
+            <img src="https://shardingsphere.apache.org/images/db_sharding.png" class="point-img" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="con-tran">
+          <div class="con-item">
+            <div class="l-msg">
+              <div class="l-m-tit">DistSQL</div>
+              <hr class="l-m-tit-hr" />
+              <div class="l-m-info">
+                <p>Provide distribute SQL to operate resources and rules like native database.</p>
+              </div>
+            </div>
+            <img src="https://shardingsphere.apache.org/images/db_transaction.png" class="point-img" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="con-tran">
+          <div class="con-item">
+            <div class="l-msg">
+              <div class="l-m-tit">Extensible</div>
+              <hr class="l-m-tit-hr" />
+              <div class="l-m-info">
+                <p>Features can be embedded into project flexibility. Developers can customize their own ShardingSphere just like building lego blocks.</p>
+              </div>
+            </div>
+            <img src="https://shardingsphere.apache.org/images/db_transaction.png" class="point-img" alt="" />
           </div>
         </div>
       </div>
@@ -333,6 +364,10 @@
       },
     });
   </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/document.js"></script>
+
   <!-- chosen color of the pagination -->
   <style type="text/css">
     .my-bullet-active {

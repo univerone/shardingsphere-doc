@@ -22,16 +22,16 @@ Attributes:
     </item>
     
     <item>
-      <title>Replica Query</title>
-      <link>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/replica-query/</link>
+      <title>Readwrite-splitting</title>
+      <link>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/readwrite-splitting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/replica-query/</guid>
-      <description>Root Configuration Class name: ReplicaQueryRuleConfiguration
+      <guid>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/readwrite-splitting/</guid>
+      <description>Root Configuration Class name: ReadwriteSplittingRuleConfiguration
 Attributes:
-   Name DataType Description     dataSources (+) Collection&amp;lt;ReplicaQueryDataSourceRuleConfiguration&amp;gt; Data sources of primary and replicas   loadBalancers (*) Map&amp;lt;String, ShardingSphereAlgorithmConfiguration&amp;gt; Load balance algorithm name and configurations of replica data sources    Replica Query Data Source Configuration Class name: ReplicaQueryDataSourceRuleConfiguration
+   Name DataType Description     dataSources (+) Collection&amp;lt;ReadwriteSplittingDataSourceRuleConfiguration&amp;gt; Data sources of write and reads   loadBalancers (*) Map&amp;lt;String, ShardingSphereAlgorithmConfiguration&amp;gt; Load balance algorithm name and configurations of replica data sources    Readwrite-splitting Data Source Configuration Class name: ReadwriteSplittingDataSourceRuleConfiguration
 Attributes:
-   Name DataType Description Default Value     name String Replica query data source name -   primaryDataSourceName String Primary sources source name -   replicaDataSourceNames (+) Collection&amp;lt;String&amp;gt; Replica sources source name list -   loadBalancerName (?</description>
+   Name DataType Description Default Value     name String Readwrite-splitting data source name -   writeDataSourceName String Write sources source name -   readDataSourceNames (+) Collection&amp;lt;String&amp;gt; Read sources source name list -   loadBalancerName (?</description>
     </item>
     
     <item>
@@ -42,9 +42,7 @@ Attributes:
       <guid>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/encrypt/</guid>
       <description>Root Configuration Class name: org.apache.shardingsphere.encrypt.api.config.EncryptRuleConfiguration
 Attributes:
-   Name DataType Description     tables (+) Collection&amp;lt;EncryptTableRuleConfiguration&amp;gt; Encrypt table rule configurations   encryptors (+) Map&amp;lt;String, ShardingSphereAlgorithmConfiguration&amp;gt; Encrypt algorithm name and configurations    Encrypt Table Rule Configuration Class name: org.apache.shardingsphere.encrypt.api.config.rule.EncryptTableRuleConfiguration
-Attributes:
-   Name DataType Description     name String Table name   columns (+) Collection&amp;lt;EncryptColumnRuleConfiguration&amp;gt; Encrypt column rule configurations    Encrypt Column Rule Configuration Class name: org.</description>
+   Name DataType Description Default Value     tables (+) Collection&amp;lt;EncryptTableRuleConfiguration&amp;gt; Encrypt table rule configurations    encryptors (+) Map&amp;lt;String, ShardingSphereAlgorithmConfiguration&amp;gt; Encrypt algorithm name and configurations    queryWithCipherColumn (?) boolean Whether query with cipher column for data encrypt. User you can use plaintext to query if have true    Encrypt Table Rule Configuration Class name: org.</description>
     </item>
     
     <item>
@@ -59,17 +57,26 @@ Attributes:
     </item>
     
     <item>
-      <title>Governance</title>
-      <link>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/governance/</link>
+      <title>Mode</title>
+      <link>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/governance/</guid>
-      <description>Configuration Item Explanation Management Configuration Entrance
-Class name: org.apache.shardingsphere.governance.repository.api.config.GovernanceConfiguration
+      <guid>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mode/</guid>
+      <description>Configuration Item Explanation Memory mode Configuration Entrance
+Class name: org.apache.shardingsphere.infra.config.mode.ModeConfiguration
 Attributes:
-   Name Data Type Description     name String Governance instance name   registryCenterConfiguration GovernanceCenterConfiguration Config of registry-center   additionalConfigCenterConfiguration GovernanceCenterConfiguration Config additional of config-center    The type of registryCenter could be Zookeeper or etcd. The type of additional ConfigCenter could be Zookeeper or etcd, Apollo, Nacos.
-Governance Instance Configuration
-Class name: org.</description>
+   Name Data Type Description     type (?) String Memory    Standalone mode Configuration Entrance
+Class name: org.apache.shardingsphere.infra.config.mode.ModeConfiguration
+   Name Data Type Description     type String Standalone    repository PersistRepositoryConfiguration Configuration StandalonePersistRepositoryConfiguration   overwrite boolean Local configurations overwrite file configurations or not; if they overwrite, each start takes reference of local configurations    StandalonePersistRepositoryConfiguration Configuration</description>
+    </item>
+    
+    <item>
+      <title>Mixed Rules</title>
+      <link>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shardingsphere.apache.org/document/current/en/user-manual/shardingsphere-jdbc/configuration/java-api/mix/</guid>
+      <description>Configuration Item Explanation /* Data source configuration */ HikariDataSource writeDataSource0 = new HikariDataSource(); writeDataSource0.setDriverClassName(&amp;#34;com.mysql.jdbc.Driver&amp;#34;); writeDataSource0.setJdbcUrl(&amp;#34;jdbc:mysql://localhost:3306/db0?serverTimezone=UTC&amp;amp;useSSL=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;#34;); writeDataSource0.setUsername(&amp;#34;root&amp;#34;); writeDataSource0.setPassword(&amp;#34;&amp;#34;); HikariDataSource writeDataSource1 = new HikariDataSource(); // ...Omit specific configuration.  HikariDataSource read0OfwriteDataSource0 = new HikariDataSource(); // ...Omit specific configuration.  HikariDataSource read1OfwriteDataSource0 = new HikariDataSource(); // ...Omit specific configuration.  HikariDataSource read0OfwriteDataSource1 = new HikariDataSource(); // ...Omit specific configuration.  HikariDataSource read1OfwriteDataSource1 = new HikariDataSource(); // ...Omit specific configuration.  Map&amp;lt;String, DataSource&amp;gt; datasourceMaps = new HashMap&amp;lt;&amp;gt;(6); datasourceMaps.</description>
     </item>
     
   </channel>

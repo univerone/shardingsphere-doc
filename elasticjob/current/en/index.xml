@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/en/user-manual/elasticjob-lite/operation/deploy-guide/</guid>
-      <description>Application deployment  Start the ZooKeeper of the ElasticJob-Lite designated registry. Run the jar file containing ElasticJob-Lite and business code. It is not limited to the startup mode of jar or war. When the job server is configured with multiple network cards, the network card address can be specified by setting the system variable elasticjob.preferred.network.interface. ElasticJob obtains the first non-loopback available IPV4 address in the network card list by default.  Operation and maintenance platform and RESTFul API deployment (optional)  Unzip elasticjob-lite-console-${version}.</description>
+      <description>Application deployment  Start the ZooKeeper of the ElasticJob-Lite designated registry. Run the jar file containing ElasticJob-Lite and business code. It is not limited to the startup mode of jar or war. When the job server is configured with multiple network cards, the network card address can be specified by setting the system variable elasticjob.preferred.network.interface or specify network addresses by setting the system variable elasticjob.preferred.network.ip. ElasticJob obtains the first non-loopback available IPV4 address in the network card list by default.</description>
     </item>
     
     <item>
@@ -182,14 +182,10 @@ There is no need to install the Mesos environment to run jobs locally.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/en/user-manual/elasticjob-lite/configuration/spring-boot-starter/</guid>
-      <description>Registry Center Configuration Prefix: elasticjob.reg-center
+      <description>To use the Spring boot, user need to add the dependency of the elasticjob-lite-spring-boot-starter module in the pom.xml file.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.shardingsphere.elasticjob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticjob-lite-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${latest.release.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Registry Center Configuration Prefix: elasticjob.reg-center
 Configuration:
-   Property name Required     server-lists Yes   namespace Yes   base-sleep-time-milliseconds No   max-sleep-time-milliseconds No   max-retries No   session-timeout-milliseconds No   connection-timeout-milliseconds No   digest No    Reference:
-YAML
-elasticjob: regCenter: serverLists: localhost:6181 namespace: elasticjob-lite-springboot Properties
-elasticjob.reg-center.namespace=elasticjob-lite-springboot elasticjob.reg-center.server-lists=localhost:6181 Job Configuration Prefix: elasticjob.jobs
-Configuration:
-   Property name Required     elasticJobClass / elasticJobType Yes   cron No   jobBootstrapBeanName No   sharding-total-count Yes   sharding-item-parameters No   job-parameter No   monitor-execution No   failover No   misfire No   max-time-diff-seconds No   reconcile-interval-minutes No   job-sharding-strategy-type No   job-executor-service-handler-type No   job-error-handler-type No   job-listener-types No   description No   props No   disabled No   overwrite No    &amp;ldquo;elasticJobClass&amp;rdquo; and &amp;ldquo;elasticJobType&amp;rdquo; are mutually exclusive.</description>
+   Property name Required     server-lists Yes   namespace Yes   base-sleep-time-milliseconds No   max-sleep-time-milliseconds No   max-retries No   session-timeout-milliseconds No   connection-timeout-milliseconds No   digest No    Reference:</description>
     </item>
     
     <item>
@@ -347,7 +343,7 @@ Job configuration Implements ElasticJob Job implementation is similar to other u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/en/user-manual/elasticjob-lite/usage/tracing/spring-namespace/</guid>
-      <description>Import Maven Dependency &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.shardingsphere.elasticjob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticjob-lite-spring-namespace&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${elasticjob.latest.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Configuration &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:elasticjob=&amp;#34;http://shardingsphere.apache.org/schema/elasticjob&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://shardingsphere.apache.org/schema/elasticjob http://shardingsphere.apache.org/schema/elasticjob/elasticjob.xsd &amp;#34;&amp;gt; &amp;lt;!-- Configure registry center for job --&amp;gt; &amp;lt;elasticjob:zookeeper id=&amp;#34;regCenter&amp;#34; server-lists=&amp;#34;yourhost:2181&amp;#34; namespace=&amp;#34;my-job&amp;#34; base-sleep-time-milliseconds=&amp;#34;1000&amp;#34; max-sleep-time-milliseconds=&amp;#34;3000&amp;#34; max-retries=&amp;#34;3&amp;#34; /&amp;gt; &amp;lt;!-- Configure job java bean --&amp;gt; &amp;lt;bean id=&amp;#34;myJob&amp;#34; class=&amp;#34;xxx.MyJob&amp;#34; /&amp;gt; &amp;lt;!-- Configure DataSource --&amp;gt; &amp;lt;bean id=&amp;#34;tracingDataSource&amp;#34; class=&amp;#34;org.apache.commons.dbcp.BasicDataSource&amp;#34; destroy-method=&amp;#34;close&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;driverClassName&amp;#34; value=&amp;#34;${driver.class.name}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;url&amp;#34; value=&amp;#34;${url}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;username&amp;#34; value=&amp;#34;${username}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;password&amp;#34; value=&amp;#34;${password}&amp;#34; /&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;!</description>
+      <description>Import Maven Dependency &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.shardingsphere.elasticjob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticjob-lite-spring-namespace&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${elasticjob.latest.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Configuration &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:elasticjob=&amp;#34;http://shardingsphere.apache.org/schema/elasticjob&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://shardingsphere.apache.org/schema/elasticjob http://shardingsphere.apache.org/schema/elasticjob/elasticjob.xsd &amp;#34;&amp;gt; &amp;lt;!-- Configure registry center for job --&amp;gt; &amp;lt;elasticjob:zookeeper id=&amp;#34;regCenter&amp;#34; server-lists=&amp;#34;yourhost:2181&amp;#34; namespace=&amp;#34;my-job&amp;#34; base-sleep-time-milliseconds=&amp;#34;1000&amp;#34; max-sleep-time-milliseconds=&amp;#34;3000&amp;#34; max-retries=&amp;#34;3&amp;#34; /&amp;gt; &amp;lt;!-- Configure job java bean --&amp;gt; &amp;lt;bean id=&amp;#34;myJob&amp;#34; class=&amp;#34;xxx.MyJob&amp;#34; /&amp;gt; &amp;lt;!-- Configure DataSource --&amp;gt; &amp;lt;bean id=&amp;#34;tracingDataSource&amp;#34; class=&amp;#34;org.apache.commons.dbcp2.BasicDataSource&amp;#34; destroy-method=&amp;#34;close&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;driverClassName&amp;#34; value=&amp;#34;${driver.class.name}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;url&amp;#34; value=&amp;#34;${url}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;username&amp;#34; value=&amp;#34;${username}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;password&amp;#34; value=&amp;#34;${password}&amp;#34; /&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
@@ -357,7 +353,7 @@ Job configuration Implements ElasticJob Job implementation is similar to other u
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/en/user-manual/elasticjob-lite/operation/web-console/</guid>
       <description>Unzip elasticjob-lite-console-${version}.tar.gz and execute bin\start.sh. Open the browser and visit http://localhost:8899/ to access the console. 8899 is the default port number. You can customize the port number by entering -p through the startup script.
-Log in The console provides two types of accounts: administrator and guest. The administrator has all operation rights, and the visitors only have the viewing rights. The default administrator user name and password are root/root，and the guest user name and password are guest/guest，You can modify the administrator and guest user names and passwords through conf\auth.</description>
+Log in The console provides two types of accounts: administrator and guest. The administrator has all operation rights, and the visitors only have the viewing rights. The default administrator user name and password are root/root，and the guest user name and password are guest/guest，You can modify the administrator and guest user names and passwords through conf\application.</description>
     </item>
     
     <item>
@@ -367,8 +363,7 @@ Log in The console provides two types of accounts: administrator and guest. The 
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/en/features/failover/</guid>
       <description>ElasticJob will not re-shard during this execution, but wait for the next scheduling before starting the re-sharding process. When the server is down during job execution, failover allows the unfinished task to be compensated and executed on another job node.
-Enable failover and monitorExecution together to take effect.
-Concept Failover is a temporary compensation execution mechanism for the currently executed job. When the next job is run, the current job allocation will be adjusted through resharding.</description>
+Concept Failover is a temporary compensation execution mechanism for the currently executed job. When the next job is run, the current job allocation will be adjusted through resharding. For example, if the job is executed at an hourly interval, each execution will take 30 minutes.</description>
     </item>
     
     <item>

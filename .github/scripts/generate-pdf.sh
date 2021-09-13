@@ -14,9 +14,9 @@ function prepare {
     wget https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SourceHanSansSC.zip
     wget https://github.com/adobe-fonts/source-han-serif/raw/release/OTF/SourceHanSerifSC_SB-H.zip
     wget https://github.com/adobe-fonts/source-han-serif/raw/release/OTF/SourceHanSerifSC_EL-M.zip
-    unzip SourceHanSansSC.zip
-    unzip SourceHanSerifSC_EL-M.zip
-    unzip SourceHanSerifSC_SB-H.zip
+    unzip SourceHanSansSC.zip -d SourceHanSansSC
+    unzip SourceHanSerifSC_EL-M.zip -d SourceHanSerifSC_EL-M
+    unzip SourceHanSerifSC_SB-H.zip -d SourceHanSerifSC_SB-H
     sudo mv SourceHanSansSC SourceHanSerifSC_EL-M SourceHanSerifSC_SB-H /usr/share/fonts/opentype/
     wget -O source-serif-pro.zip https://www.fontsquirrel.com/fonts/download/source-serif-pro
     unzip source-serif-pro -d source-serif-pro
@@ -46,9 +46,9 @@ function generate_pdf {
         cp .github/scripts/conf.py ${localDir}/
         cd $localDir
         if [[ "$1" == "shardingsphere" ]] ;then
-            sed -i 's/Apache ShardingSphere document/Apache ShardingSphere ElasticJob document/g' conf.py
-        else
             sed -i 's/Apache ShardingSphere ElasticJob document/Apache ShardingSphere document/g' conf.py
+        else
+            sed -i 's/Apache ShardingSphere document/Apache ShardingSphere ElasticJob document/g' conf.py
         fi
         if [[ "$lang" == "en" ]] ;then
             sed -i "s/language = 'zh_CN'/language = 'en_US'/" conf.py
@@ -128,15 +128,13 @@ function check_diff {
     cd _$1
     git log -1 -p docs > new_version_$1
     cd ..
-    diff old_version_$1 _$1/new_version_$1 > result_version_$1
-    if  [ ! -s result_version_$1 ]  ; then
+    if cmp --silent -- old_version_$1 _$1/new_version_$1
+    then
         echo "$1 docs document sources didn't change and nothing to do!"
-        rm result_version_$1
         rm -rf _$1
     else
         echo "generate $1 docs pdfs"
         generate_pdf "$1"
-        rm result_version_$1
         rm -rf _$1
     fi
 }

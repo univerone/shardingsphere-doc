@@ -33,7 +33,7 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.2.2
+      uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: '0.70.0'
         extended: true
@@ -41,4 +41,4 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo start to deploy ss doc...
-        sh .github/scripts/build-website.sh
+        bash .github/scripts/build-website.sh

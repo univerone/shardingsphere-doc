@@ -1,45 +1,82 @@
-commit bdecb6ccb57104efcdae0ecddb5f4829055b66e4
-Author: 吴伟杰 <root496879118@me.com>
-Date:   Fri Nov 13 15:57:14 2020 +0800
+commit 38062462b4a44d0e22c17483d62f190e7b16277c
+Author: skai <sunkai.cai@gmail.com>
+Date:   Sun Sep 12 22:04:05 2021 +0800
 
-    Update contents about Cloud Scheduler in FAQ (#1719)
+    update docs (#1978)
+    
+    Co-authored-by: 蔡顺铠 <skai.cpp@gmail.com>
 
-diff --git a/docs/content/faq/_index.cn.md b/docs/content/faq/_index.cn.md
-index 8b1051a6e..ce9b54e3b 100644
---- a/docs/content/faq/_index.cn.md
-+++ b/docs/content/faq/_index.cn.md
-@@ -104,4 +104,14 @@ ElasticJob 执行任务会获取本机IP，首次可能存在获取IP较慢的
+diff --git a/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.cn.md b/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.cn.md
+index a61f3e035..824d5615d 100644
+--- a/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.cn.md
++++ b/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.cn.md
+@@ -129,9 +129,15 @@ elasticjob.jobs.manualScriptJob.props.script.command.line=echo Manual SCRIPT Job
  
- 打开cmd.exe并执行下面的命令：
+ 配置前缀：`elasticjob.tracing`
  
--tar zxvf apache-shardingsphere-elasticjob-${RELEASE.VERSION}-lite-ui-bin.tar.gz
-\ No newline at end of file
-+tar zxvf apache-shardingsphere-elasticjob-${RELEASE.VERSION}-lite-ui-bin.tar.gz
+-| 属性名           | 可选值        | 是否必填 |
+-| -----------------|:------------- |:-------- |
+-| type             | RDB           | 否       |
++| 属性名            | 可选值    | 是否必填  |描述       |
++| -----------------|:-------- |:------- |:--------- |
++| type             | RDB      | 否       |          |
++| includeJobNames  |          | 否       | 作业白名单 |
++| excludeJobNames  |          | 否       | 作业黑名单 |
 +
-+## 13. 运行 Cloud Scheduler 持续输出日志 "Elastic job: IP:PORT has leadership"，不能正常运行
++**includeJobNames 与 excludeJobNames 互斥，事件追踪配置只能有一种属性**
 +
-+回答：
-+
-+Cloud Scheduler 依赖 Mesos 库，启动时需要通过 `-Djava.library.path` 指定 Mesos 库所在目录。
-+
-+例如，Mesos 库位于 `/usr/local/lib`，启动 Cloud Scheduler 前需要设置 `-Djava.library.path=/usr/local/lib`。
-+
-+Mesos 相关请参考 [Apache Mesos](https://mesos.apache.org/)。
-diff --git a/docs/content/faq/_index.en.md b/docs/content/faq/_index.en.md
-index 50edef214..cb2df34c9 100644
---- a/docs/content/faq/_index.en.md
-+++ b/docs/content/faq/_index.en.md
-@@ -104,3 +104,13 @@ Some decompression tools may truncate the file name when decompressing the Shard
- Open cmd.exe and execute the following command:
++**includeJobNames 与 excludeJobNames 都为空时，默认为所有作业加载事件追踪**
  
- tar zxvf apache-shardingsphere-elasticjob-${RELEASE.VERSION}-lite-ui-bin.tar.gz
+ 目前仅提供了 RDB 类型的事件追踪数据源实现。
+ Spring IoC 容器中存在 DataSource 类型的 bean 且配置数据源类型为 RDB 时会自动配置事件追踪，无须显式创建。
+@@ -143,11 +149,13 @@ Spring IoC 容器中存在 DataSource 类型的 bean 且配置数据源类型为
+ elasticjob:
+   tracing:
+     type: RDB
++    excludeJobNames: [ job-name-1, job-name-2 ]
+ ```
+ 
+ **Properties**
+ ```
+ elasticjob.tracing.type=RDB
++elasticjob.tracing.excludeJobNames=[ job-name ]
+ ```
+ 
+ ## 作业信息导出配置
+diff --git a/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.en.md b/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.en.md
+index c0301707d..eb403a7eb 100644
+--- a/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.en.md
++++ b/docs/content/user-manual/elasticjob-lite/configuration/spring-boot-starter.en.md
+@@ -130,9 +130,15 @@ elasticjob.jobs.manualScriptJob.props.script.command.line=echo Manual SCRIPT Job
+ 
+ Prefix: `elasticjob.tracing`
+ 
+-| Property name    | Options       | Required |
+-| -----------------|:------------- |:-------- |
+-| type             | RDB           | No       |
++| Property name    | Options  | Required | Description       |
++| -----------------|:---------|:-------- |:----------------- |
++| type             | RDB      | No       |                   |
++| includeJobNames  |          | No       | allow list of job |
++| excludeJobNames  |          | No       | block list of job |
 +
-+## 13. Unable to startup Cloud Scheduler. Continuously output "Elastic job: IP:PORT has leadership"gg
++**"includeJobNames" and "excludeJobNames" are mutually exclusive.**
 +
-+Answer: 
-+
-+Cloud Scheduler required Mesos native library. Specify Mesos native library path by property `-Djava.library.path`.
-+
-+For instance, Mesos native libraries are under `/usr/local/lib`, so the property `-Djava.library.path=/usr/local/lib` need to be set to start the Cloud Scheduler.
-+
-+About Apache Mesos, please refer to [Apache Mesos](https://mesos.apache.org/).
++**Load all Job When "includeJobNames" and "excludeJobNames" are null.**
+ 
+ RDB is the only supported type at present.
+ If Spring IoC container contained a bean of DataSource and RDB was set in configuration, an instance of TracingConfiguration will be created automatically.
+@@ -144,11 +150,13 @@ Reference:
+ elasticjob:
+   tracing:
+     type: RDB
++    excludeJobNames: [ job-name-1, job-name-2 ]
+ ```
+ 
+ **Properties**
+ ```
+ elasticjob.tracing.type=RDB
++elasticjob.tracing.excludeJobNames=[ job-name ]
+ ```
+ 
+ ### Dump Job Info Configuration

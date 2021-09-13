@@ -30,7 +30,7 @@
 可配置属性：
    属性名 构造器注入     serverLists 是   namespace 是   baseSleepTimeMilliseconds 否   maxSleepTimeMilliseconds 否   maxRetries 否   sessionTimeoutMilliseconds 否   connectionTimeoutMilliseconds 否   digest 否    作业配置 类名称：org.apache.shardingsphere.elasticjob.api.JobConfiguration
 可配置属性：
-   属性名 构造器注入     jobName 是   shardingTotalCount 是   cron 否   shardingItemParameters 否   jobParameter 否   monitorExecution 否   failover 否   misfire 否   maxTimeDiffSeconds 否   reconcileIntervalMinutes 否   jobShardingStrategyType 否   jobExecutorServiceHandlerType 否   jobErrorHandlerType 否   jobListenerTypes 否   description 否   props 否   disabled 否   overwrite 否    </description>
+   属性名 构造器注入     jobName 是   shardingTotalCount 是   cron 否   timeZone 否   shardingItemParameters 否   jobParameter 否   monitorExecution 否   failover 否   misfire 否   maxTimeDiffSeconds 否   reconcileIntervalMinutes 否   jobShardingStrategyType 否   jobExecutorServiceHandlerType 否   jobErrorHandlerType 否   jobListenerTypes 否   description 否   props 否   disabled 否   overwrite 否    </description>
     </item>
     
     <item>
@@ -105,7 +105,7 @@ public class MyJobDemo { public static void main(final String[] args) { JobBoots
       <guid>https://shardingsphere.apache.org/elasticjob/current/cn/user-manual/elasticjob-lite/usage/job-listener/listener-interface/</guid>
       <description>常规监听器 若作业处理作业服务器的文件，处理完成后删除文件，可考虑使用每个节点均执行清理任务。 此类型任务实现简单，且无需考虑全局分布式任务是否完成，应尽量使用此类型监听器。
 public class MyJobListener implements ElasticJobListener { @Override public void beforeJobExecuted(ShardingContexts shardingContexts) { // do something ...  } @Override public void afterJobExecuted(ShardingContexts shardingContexts) { // do something ...  } @Override public String getType() { return &amp;#34;simpleJobListener&amp;#34;; } } 分布式监听器 若作业处理数据库数据，处理完成后只需一个节点完成数据清理任务即可。 此类型任务处理复杂，需同步分布式环境下作业的状态同步，提供了超时设置来避免作业不同步导致的死锁，应谨慎使用。
-public class MyDistributeOnceJobListener extends AbstractDistributeOnceElasticJobListener { public TestDistributeOnceElasticJobListener(long startTimeoutMills, long completeTimeoutMills) { super(startTimeoutMills, completeTimeoutMills); } @Override public void doBeforeJobExecutedAtLastStarted(ShardingContexts shardingContexts) { // do something ...  } @Override public void doAfterJobExecutedAtLastCompleted(ShardingContexts shardingContexts) { // do something .</description>
+public class MyDistributeOnceJobListener extends AbstractDistributeOnceElasticJobListener { private static final long startTimeoutMills = 3000; private static final long completeTimeoutMills = 3000; public MyDistributeOnceJobListener() { super(startTimeoutMills, completeTimeoutMills); } @Override public void doBeforeJobExecutedAtLastStarted(ShardingContexts shardingContexts) { // do something .</description>
     </item>
     
     <item>
@@ -136,7 +136,7 @@ public class MyDistributeOnceJobListener extends AbstractDistributeOnceElasticJo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/cn/user-manual/elasticjob-lite/operation/deploy-guide/</guid>
-      <description>应用部署  启动 ElasticJob-Lite 指定注册中心的 ZooKeeper。 运行包含 ElasticJob-Lite 和业务代码的 jar 文件。不限于 jar 或 war 的启动方式。 当作业服务器配置多网卡时，可通过设置系统变量 elasticjob.preferred.network.interface 指定网卡地址。ElasticJob 默认获取网卡列表中第一个非回环可用 IPV4 地址。  运维平台和 RESTFul API 部署(可选)  解压缩 elasticjob-lite-console-${version}.tar.gz 并执行 bin\start.sh。 打开浏览器访问 http://localhost:8899/ 即可访问控制台。8899 为默认端口号，可通过启动脚本输入 -p 自定义端口号。 访问 RESTFul API 方法同控制台。 elasticjob-lite-console-${version}.tar.gz 可通过 mvn install 编译获取。  </description>
+      <description>应用部署  启动 ElasticJob-Lite 指定注册中心的 ZooKeeper。 运行包含 ElasticJob-Lite 和业务代码的 jar 文件。不限于 jar 或 war 的启动方式。 当作业服务器配置多网卡时，可通过设置系统变量 elasticjob.preferred.network.interface 指定网卡地址或 elasticjob.preferred.network.ip 指定IP。 ElasticJob 默认获取网卡列表中第一个非回环可用 IPV4 地址。  运维平台和 RESTFul API 部署(可选)  解压缩 elasticjob-lite-console-${version}.tar.gz 并执行 bin\start.sh。 打开浏览器访问 http://localhost:8899/ 即可访问控制台。8899 为默认端口号，可通过启动脚本输入 -p 自定义端口号。 访问 RESTFul API 方法同控制台。 elasticjob-lite-console-${version}.tar.gz 可通过 mvn install 编译获取。  </description>
     </item>
     
     <item>
@@ -154,14 +154,13 @@ public class MyDistributeOnceJobListener extends AbstractDistributeOnceElasticJo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/cn/user-manual/elasticjob-lite/configuration/spring-boot-starter/</guid>
-      <description>注册中心配置 配置前缀：elasticjob.reg-center
+      <description>使用 Spring-boot 需在 pom.xml 文件中添加 elasticjob-lite-spring-boot-starter 模块的依赖。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.shardingsphere.elasticjob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticjob-lite-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${latest.release.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 注册中心配置 配置前缀：elasticjob.reg-center
 可配置属性：
    属性名 是否必填     server-lists 是   namespace 是   base-sleep-time-milliseconds 否   max-sleep-time-milliseconds 否   max-retries 否   session-timeout-milliseconds 否   connection-timeout-milliseconds 否   digest 否    配置格式参考：
 YAML
 elasticjob: regCenter: serverLists: localhost:6181 namespace: elasticjob-lite-springboot Properties
-elasticjob.reg-center.namespace=elasticjob-lite-springboot elasticjob.reg-center.server-lists=localhost:6181 作业配置 配置前缀：elasticjob.jobs
-可配置属性：
-   属性名 是否必填     elasticJobClass / elasticJobType 是   cron 否   jobBootstrapBeanName 否   sharding-total-count 是   sharding-item-parameters 否   job-parameter 否   monitor-execution 否   failover 否   misfire 否   max-time-diff-seconds 否   reconcile-interval-minutes 否   job-sharding-strategy-type 否   job-executor-service-handler-type 否   job-error-handler-type 否   job-listener-types 否   description 否   props 否   disabled 否   overwrite 否    elasticJobClass 与 elasticJobType 互斥，每项作业只能有一种类型</description>
+elasticjob.reg-center.namespace=elasticjob-lite-springboot elasticjob.reg-center.server-lists=localhost:6181 作业配置 配置前缀：elasticjob.jobs</description>
     </item>
     
     <item>
@@ -225,7 +224,7 @@ echo &amp;#34;dump@jobName&amp;#34; | nc &amp;lt;任意一台作业服务器IP&a
 例如：按照地区水平拆分数据库，数据库 A 是北京的数据；数据库 B 是上海的数据；数据库 C 是广州的数据。 如果仅按照分片项配置，开发者需要了解 0 表示北京；1 表示上海；2 表示广州。 合理使用个性化参数可以让代码更可读，如果配置为 0=北京,1=上海,2=广州，那么代码中直接使用北京，上海，广州的枚举值即可完成分片项和业务逻辑的对应关系。
 资源最大限度利用 ElasticJob 提供最灵活的方式，最大限度的提高执行作业的吞吐量。 当新增加作业服务器时，ElasticJob 会通过注册中心的临时节点的变化感知到新服务器的存在，并在下次任务调度的时候重新分片，新的服务器会承载一部分作业分片，如下图所示。
 将分片项设置为大于服务器的数量，最好是大于服务器倍数的数量，作业将会合理的利用分布式资源，动态的分配分片项。
-例如：3 台服务器，分成 10 片，则分片项分配结果为服务器 A = 0,1,2；服务器 B = 3,4,5；服务器 C = 6,7,8,9。 如果服务器 C 崩溃，则分片项分配结果为服务器 A = 0,1,2,3,4; 服务器 B = 5,6,7,8,9。 在不丢失分片项的情况下，最大限度的利用现有资源提高吞吐量。</description>
+例如：3 台服务器，分成 10 片，则分片项分配结果为服务器 A = 0,1,2,9；服务器 B = 3,4,5；服务器 C = 6,7,8。 如果服务器 C 崩溃，则分片项分配结果为服务器 A = 0,1,2,3,4; 服务器 B = 5,6,7,8,9。 在不丢失分片项的情况下，最大限度的利用现有资源提高吞吐量。</description>
     </item>
     
     <item>
@@ -284,7 +283,7 @@ echo &amp;#34;dump@jobName&amp;#34; | nc &amp;lt;任意一台作业服务器IP&a
 可配置属性：
    属性名 是否必填     id 是   server-lists 是   namespace 是   base-sleep-time-milliseconds 否   max-sleep-time-milliseconds 否   max-retries 否   session-timeout-milliseconds 否   connection-timeout-milliseconds 否   digest 否    作业配置 &amp;lt;elasticjob:job /&amp;gt;
 可配置属性：
-   属性名 是否必填     id 是   class 否   job-ref 否   registry-center-ref 是   tracing-ref 否   cron 是   sharding-total-count 是   sharding-item-parameters 否   job-parameter 否   monitor-execution 否   failover 否   misfire 否   max-time-diff-seconds 否   reconcile-interval-minutes 否   job-sharding-strategy-type 否   job-executor-service-handler-type 否   job-error-handler-type 否   job-listener-types 否   description 否   props 否   disabled 否   overwrite 否    事件追踪配置 &amp;lt;elasticjob:rdb-tracing /&amp;gt;</description>
+   属性名 是否必填     id 是   class 否   job-ref 否   registry-center-ref 是   tracing-ref 否   cron 是   timeZone 否   sharding-total-count 是   sharding-item-parameters 否   job-parameter 否   monitor-execution 否   failover 否   misfire 否   max-time-diff-seconds 否   reconcile-interval-minutes 否   job-sharding-strategy-type 否   job-executor-service-handler-type 否   job-error-handler-type 否   job-listener-types 否   description 否   props 否   disabled 否   overwrite 否    事件追踪配置 &amp;lt;elasticjob:rdb-tracing /&amp;gt;</description>
     </item>
     
     <item>
@@ -326,7 +325,7 @@ Bean 默认是单例的，如果该作业实现会在同一个进程内被创建
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/cn/user-manual/elasticjob-lite/usage/tracing/spring-namespace/</guid>
       <description>引入 Maven 依赖 引入 elasticjob-lite-spring
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.shardingsphere.elasticjob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticjob-lite-spring-namespace&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${elasticjob.latest.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 配置 &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:elasticjob=&amp;#34;http://shardingsphere.apache.org/schema/elasticjob&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://shardingsphere.apache.org/schema/elasticjob http://shardingsphere.apache.org/schema/elasticjob/elasticjob.xsd &amp;#34;&amp;gt; &amp;lt;!--配置作业注册中心 --&amp;gt; &amp;lt;elasticjob:zookeeper id=&amp;#34;regCenter&amp;#34; server-lists=&amp;#34;yourhost:2181&amp;#34; namespace=&amp;#34;my-job&amp;#34; base-sleep-time-milliseconds=&amp;#34;1000&amp;#34; max-sleep-time-milliseconds=&amp;#34;3000&amp;#34; max-retries=&amp;#34;3&amp;#34; /&amp;gt; &amp;lt;!-- 配置作业 Bean --&amp;gt; &amp;lt;bean id=&amp;#34;myJob&amp;#34; class=&amp;#34;xxx.MyJob&amp;#34; /&amp;gt; &amp;lt;!-- 配置数据源 --&amp;gt; &amp;lt;bean id=&amp;#34;tracingDataSource&amp;#34; class=&amp;#34;org.apache.commons.dbcp.BasicDataSource&amp;#34; destroy-method=&amp;#34;close&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;driverClassName&amp;#34; value=&amp;#34;${driver.class.name}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;url&amp;#34; value=&amp;#34;${url}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;username&amp;#34; value=&amp;#34;${username}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;password&amp;#34; value=&amp;#34;${password}&amp;#34; /&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;!-- 配置事件追踪 --&amp;gt; &amp;lt;elasticjob:rdb-tracing id=&amp;#34;elasticJobTrace&amp;#34; data-source-ref=&amp;#34;elasticJobTracingDataSource&amp;#34; /&amp;gt; &amp;lt;!</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.shardingsphere.elasticjob&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticjob-lite-spring-namespace&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${elasticjob.latest.version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 配置 &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:elasticjob=&amp;#34;http://shardingsphere.apache.org/schema/elasticjob&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://shardingsphere.apache.org/schema/elasticjob http://shardingsphere.apache.org/schema/elasticjob/elasticjob.xsd &amp;#34;&amp;gt; &amp;lt;!--配置作业注册中心 --&amp;gt; &amp;lt;elasticjob:zookeeper id=&amp;#34;regCenter&amp;#34; server-lists=&amp;#34;yourhost:2181&amp;#34; namespace=&amp;#34;my-job&amp;#34; base-sleep-time-milliseconds=&amp;#34;1000&amp;#34; max-sleep-time-milliseconds=&amp;#34;3000&amp;#34; max-retries=&amp;#34;3&amp;#34; /&amp;gt; &amp;lt;!-- 配置作业 Bean --&amp;gt; &amp;lt;bean id=&amp;#34;myJob&amp;#34; class=&amp;#34;xxx.MyJob&amp;#34; /&amp;gt; &amp;lt;!-- 配置数据源 --&amp;gt; &amp;lt;bean id=&amp;#34;tracingDataSource&amp;#34; class=&amp;#34;org.apache.commons.dbcp2.BasicDataSource&amp;#34; destroy-method=&amp;#34;close&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;driverClassName&amp;#34; value=&amp;#34;${driver.class.name}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;url&amp;#34; value=&amp;#34;${url}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;username&amp;#34; value=&amp;#34;${username}&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;password&amp;#34; value=&amp;#34;${password}&amp;#34; /&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;!-- 配置事件追踪 --&amp;gt; &amp;lt;elasticjob:rdb-tracing id=&amp;#34;elasticJobTrace&amp;#34; data-source-ref=&amp;#34;elasticJobTracingDataSource&amp;#34; /&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
@@ -416,7 +415,6 @@ Maven 坐标：
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/cn/features/failover/</guid>
       <description>ElasticJob 不会在本次执行过程中进行重新分片，而是等待下次调度之前才开启重新分片流程。 当作业执行过程中服务器宕机，失效转移允许将该次未完成的任务在另一作业节点上补偿执行。
-失效转移需要与监听作业运行时状态同时开启才可生效。
 概念 失效转移是当前执行作业的临时补偿执行机制，在下次作业运行时，会通过重分片对当前作业分配进行调整。 举例说明，若作业以每小时为间隔执行，每次执行耗时 30 分钟。如下如图所示。
 图中表示作业分别于 12:00，13:00 和 14:00 执行。图中显示的当前时间点为 13:00 的作业执行中。
 如果作业的其中一个分片服务器在 13:10 的时候宕机，那么剩余的 20 分钟应该处理的业务未得到执行，并且需要在 14:00 时才能再次开始执行下一次作业。 也就是说，在不开启失效转移的情况下，位于该分片的作业有 50 分钟空档期。如下如图所示。
@@ -447,8 +445,8 @@ JOB_EXECUTION_LOG 字段含义    字段名称 字段类型 是否必填 描述 
       
       <guid>https://shardingsphere.apache.org/elasticjob/current/cn/user-manual/elasticjob-lite/operation/web-console/</guid>
       <description>解压缩 elasticjob-lite-console-${version}.tar.gz 并执行 bin\start.sh。 打开浏览器访问 http://localhost:8899/ 即可访问控制台。 8899 为默认端口号，可通过启动脚本输入 -p 自定义端口号。
-登录 控制台提供两种账户：管理员及访客。 管理员拥有全部操作权限，访客仅拥有察看权限。 默认管理员用户名和密码是 root/root，访客用户名和密码是 guest/guest，可通过 conf\auth.properties 修改管理员及访客用户名及密码。
-功能列表  登录安全控制 注册中心、事件追踪数据源管理 快捷修改作业设置 作业和服务器维度状态查看 操作作业禁用\启用、停止和删除等生命周期 事件追踪查询  设计理念 运维平台和 ElasticJob-Lite 并无直接关系，是通过读取作业注册中心数据展现作业状态，或更新注册中心数据修改全局配置。
+登录 控制台提供两种账户：管理员及访客。 管理员拥有全部操作权限，访客仅拥有察看权限。 默认管理员用户名和密码是 root/root，访客用户名和密码是 guest/guest，可通过 conf\application.properties 修改管理员及访客用户名及密码。
+auth.root_username=root auth.root_password=root auth.guest_username=guest auth.guest_password=guest 功能列表  登录安全控制 注册中心、事件追踪数据源管理 快捷修改作业设置 作业和服务器维度状态查看 操作作业禁用\启用、停止和删除等生命周期 事件追踪查询  设计理念 运维平台和 ElasticJob-Lite 并无直接关系，是通过读取作业注册中心数据展现作业状态，或更新注册中心数据修改全局配置。
 控制台只能控制作业本身是否运行，但不能控制作业进程的启动，因为控制台和作业本身服务器是完全分离的，控制台并不能控制作业服务器。
 不支持项  添加作业  作业在首次运行时将自动添加。 ElasticJob-Lite 以 jar 方式启动，并无作业分发功能。 如需完全通过运维平台发布作业，请使用 ElasticJob-Cloud。</description>
     </item>

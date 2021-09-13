@@ -1,30 +1,38 @@
-commit 1c888f2a4f07afe47a25a9afe41fa13576089590
-Author: yang-7777 <67564630+yang-7777@users.noreply.github.com>
-Date:   Mon Nov 16 17:05:37 2020 +0800
+commit 9be4fc5440f3b1e20ae139a9ff7a0577ebce5bce
+Author: Liang Zhang <terrymanu@163.com>
+Date:   Mon Sep 13 18:35:34 2021 +0800
 
-    Update vote.en.md (#8170)
+    Update diagrams url for readme (#12397)
     
-    * Update vote.en.md
+    * Update diagrams url
     
-    add pmc vote process
+    * Update diagrams url
     
-    * Update vote.en.md
+    * Update diagrams url
 
-diff --git a/docs/community/content/contribute/vote.en.md b/docs/community/content/contribute/vote.en.md
-index e52004665e..c8e4dc8d17 100644
---- a/docs/community/content/contribute/vote.en.md
-+++ b/docs/community/content/contribute/vote.en.md
-@@ -146,3 +146,13 @@ Thanks for your contributions.
+diff --git a/docs/document/content/overview/_index.en.md b/docs/document/content/overview/_index.en.md
+index e5fb96316e..bc47137c15 100644
+--- a/docs/document/content/overview/_index.en.md
++++ b/docs/document/content/overview/_index.en.md
+@@ -69,7 +69,7 @@ It can be considered as an enhanced JDBC driver, which is fully compatible with
+ * Supports any third-party database connection pool, such as DBCP, C3P0, BoneCP, Druid, HikariCP.
+ * Supports any kind of JDBC standard database: MySQL, Oracle, SQLServer, PostgreSQL and any SQL92 followed databases.
  
- **12. New Committer updates [Team](/en/team/) list.**
+-![ShardingSphere-JDBC Architecture](https://shardingsphere.apache.org/document/current/img//shardingsphere-jdbc_v2.png)
++![ShardingSphere-JDBC Architecture](https://shardingsphere.apache.org/document/current/img/shardingsphere-jdbc_v2.png)
  
-+**13. Add one more step in a PMC voting process, send an email to board@apache.org. **
-+```
-+The Apache ShardingSphere project proposes to invite (nominee) to join the PMC.
-+The vote result is available here:
-+(vote link here)
-+
-+Thank you，
-+（initiator)
-+```
-+
+ ### ShardingSphere-Proxy
+ 
+@@ -82,7 +82,7 @@ Friendlier to DBAs, the MySQL version now provided can use any kind of terminal
+ * Transparent towards applications, it can be used directly as MySQL and PostgreSQL servers.
+ * Applicable to any kind of terminal that is compatible with MySQL and PostgreSQL protocol.
+ 
+-![ShardingSphere-Proxy Architecture](https://shardingsphere.apache.org/document/current/img//shardingsphere-proxy_v2.png)
++![ShardingSphere-Proxy Architecture](https://shardingsphere.apache.org/document/current/img/shardingsphere-proxy_v2.png)
+ 
+ ### ShardingSphere-Sidecar(TODO)
+ 
+diff --git a/docs/document/static/img/shardingsphere-proxy.png b/docs/document/static/img/shardingsphere-proxy_v2.png
+similarity index 100%
+rename from docs/document/static/img/shardingsphere-proxy.png
+rename to docs/document/static/img/shardingsphere-proxy_v2.png
