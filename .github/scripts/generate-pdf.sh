@@ -135,5 +135,5 @@ prepare
 clone_repo "shardingsphere"
 check_diff "shardingsphere"
 
-clone_repo "shardingsphere-elasticjob"
-check_diff "shardingsphere-elasticjob"
+# clone_repo "shardingsphere-elasticjob"
+# check_diff "shardingsphere-elasticjob"
