@@ -89,7 +89,7 @@ function generate_pdf {
         do
             path=${f%/*}
             sort -nk 1  $f | awk '{print $2}' | sed 's/^/   /g' >> "${path}/index.rst"
-            rm $f
+            rm -f $f
         done
 
         echo "generating ${lang} rst file "
@@ -105,7 +105,7 @@ function generate_pdf {
             fi
             sed -i /http.*codacy/d $f
             pandoc $f -o "${f}.rst"
-            rm $f
+            rm -f $f
         done
 
         cd ..
