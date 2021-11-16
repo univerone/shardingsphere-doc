@@ -10,8 +10,8 @@ function prepare {
     sudo apt-get update -y 
     sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
     sudo apt-get install texlive-xetex latex-cjk-all
-    wget -q https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb
-    sudo dpkg -i pandoc-2.7.2-1-amd64.deb
+    wget -q https://github.com/jgm/pandoc/releases/download/2.16.1/pandoc-2.16.1-1-amd64.deb
+    sudo dpkg -i pandoc-2.16.1-1-amd64.deb
     #wget https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SourceHanSansSC.zip
     wget https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansSC.zip
     wget https://github.com/adobe-fonts/source-han-serif/releases/download/2.000R/SourceHanSerifSC.zip
