@@ -1,7 +1,6 @@
 name: build docs PDF
 on:
-  push:
-    branches: [ asf-site ]
+  push
 jobs:
   build:
     name: publish PDF
