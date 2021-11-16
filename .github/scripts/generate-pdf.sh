@@ -126,21 +126,7 @@ function generate_pdf {
 }
 
 function check_diff {
-    if  [ ! -s old_version_$1 ]; then
-    echo init > old_version_$1
-    fi
-    cd _$1
-    git log -1 -p docs > new_version_$1
-    cd ..
-    if cmp --silent -- old_version_$1 _$1/new_version_$1
-    then
-        echo "$1 docs document sources didn't change and nothing to do!"
-        rm -rf _$1
-    else
-        echo "generate $1 docs pdfs"
-        generate_pdf "$1"
-        rm -rf _$1
-    fi
+    generate_pdf "$1"
 }
 
 prepare
